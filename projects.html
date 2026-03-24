@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <title>Our Projects | Ham Construction & Trading Co. Ltd</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <script> tailwind.config = { theme: { extend: { colors: { haven: { navy: '#0B1120', charcoal: '#1E293B', gold: '#D4AF37', goldLight: '#F3E5AB', goldDark: '#B89628' } }, fontFamily: { sans: ['Manrope'], serif: ['Playfair Display'] } } } } </script>
+</head>
+<body class="antialiased cursor-custom">
+    <div class="cursor-dot hidden lg:block"></div><div class="cursor-outline hidden lg:block"></div>
+    <!-- Navigation (same) -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-5 text-white"><div class="container mx-auto px-5 lg:px-8"><div class="flex justify-between items-center"><a href="index.html" class="text-xl md:text-2xl font-serif font-bold tracking-widest uppercase flex items-center gap-2"><i data-lucide="building-2" class="text-haven-gold w-5 h-5"></i><span class="hidden xs:inline">Ham Construction</span></a><div class="hidden lg:flex items-center space-x-7 text-sm font-medium"><a href="about.html" class="hover:text-haven-gold transition">About</a><a href="services.html" class="hover:text-haven-gold transition">Services</a><a href="projects.html" class="hover:text-haven-gold transition">Projects</a><a href="contact.html" class="hover:text-haven-gold transition">Contact</a></div><div class="hidden lg:flex items-center gap-5"><a href="tel:+211925888028" class="text-sm font-semibold text-haven-gold">092 588 8028</a><a href="contact.html" class="btn-luxury bg-haven-gold hover:bg-white text-haven-navy font-bold py-2.5 px-6 rounded-sm">Get Quote</a></div><button class="lg:hidden text-white p-2" onclick="toggleMenu()"><i data-lucide="menu" class="w-6 h-6"></i></button></div></div></nav>
+    <div id="mobile-menu" class="fixed inset-0 bg-haven-navy/95 backdrop-blur-xl z-40 transform translate-x-full transition-transform duration-500 flex flex-col justify-center items-center gap-6 lg:hidden"><button class="absolute top-6 right-6 text-white p-2" onclick="toggleMenu()"><i data-lucide="x" class="w-8 h-8"></i></button><a href="about.html" class="text-2xl font-serif text-white" onclick="toggleMenu()">About</a><a href="services.html" class="text-2xl font-serif text-white" onclick="toggleMenu()">Services</a><a href="projects.html" class="text-2xl font-serif text-white" onclick="toggleMenu()">Projects</a><a href="contact.html" class="text-2xl font-serif text-white" onclick="toggleMenu()">Contact</a><a href="contact.html" class="mt-4 bg-haven-gold text-haven-navy px-8 py-3 rounded-sm font-bold" onclick="toggleMenu()">Get a Quote</a><a href="tel:+211925888028" class="text-haven-gold text-xl font-bold">092 588 8028</a></div>
+
+    <header class="relative pt-32 pb-20 bg-haven-navy overflow-hidden"><div class="absolute inset-0 z-0 opacity-30"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=2070&auto=format" class="w-full h-full object-cover"></div><div class="container mx-auto px-5 text-center relative z-10"><h1 class="text-4xl md:text-6xl font-serif text-white">Our Projects</h1><p class="text-gray-300 mt-4">Showcasing excellence across Juba and beyond.</p></div></header>
+
+    <!-- Featured Project -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-5 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div><img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1000&auto=format" class="w-full h-[500px] object-cover rounded-sm shadow-xl"></div>
+                <div><h3 class="text-haven-gold uppercase text-sm tracking-wider">Featured Project</h3><h2 class="text-3xl md:text-4xl font-serif text-haven-navy mt-2">Modern Luxury Villa - Juba Central</h2><p class="text-gray-600 mt-4">A 4,500 sq ft contemporary residence with state-of-the-art finishes, smart home integration, and sustainable design. Completed in 2024, this project exemplifies our commitment to quality craftsmanship and client collaboration.</p><div class="mt-6 space-y-2"><p><span class="font-bold">Client:</span> Private Owner</p><p><span class="font-bold">Year:</span> 2024</p><p><span class="font-bold">Scope:</span> Full construction, interior finishing, precast mouldings</p></div><a href="contact.html" class="inline-block mt-6 bg-haven-navy text-white hover:bg-haven-gold hover:text-haven-navy font-bold py-3 px-6 rounded-sm transition">Request Similar Project</a></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid (9 images, no text) -->
+    <section class="py-20 bg-haven-light">
+        <div class="container mx-auto px-5">
+            <h2 class="text-3xl md:text-4xl font-serif text-center text-haven-navy mb-12">Project Gallery</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format" class="w-full h-64 object-cover rounded-sm shadow-md hover:scale-105 transition duration-500">
+                <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=800&auto=format" class="w-full h-64 object-cover rounded-sm shadow-md hover:scale-105 transition duration-500">
+                <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&auto=format" class="w-full h-64 object-cover rounded-sm shadow-md hover:scale-105 transition duration-500">
+                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&auto=format" class="w-full h-64 object-cover rounded-sm shadow-md hover:scale-105 transition duration-500">
+                <img src="https://images.unsplash.com/photo-1541976844346-f18aeac57b06?w=800&auto=format" class="w-full h-64 object-cover rounded-sm shadow-md hover:scale-105 transition duration-500">
+                <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&auto=format" class="w-full h-64 object-cover rounded-sm shadow-md hover:scale-105 transition duration-500">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&auto=format" class="w-full h-64 object-cover rounded-sm shadow-md hover:scale-105 transition duration-500">
+                <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&auto=format" class="w-full h-64 object-cover rounded-sm shadow-md hover:scale-105 transition duration-500">
+                <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=800&auto=format" class="w-full h-64 object-cover rounded-sm shadow-md hover:scale-105 transition duration-500">
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-haven-charcoal text-white py-12 border-t border-white/10"><div class="container mx-auto px-5"><div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8"><div><a href="index.html" class="flex items-center gap-2 text-xl font-serif font-bold"><i data-lucide="building-2" class="text-haven-gold"></i>Ham Construction</a><p class="text-gray-400 text-sm mt-3">Premium construction & trading company in Juba, South Sudan.</p></div><div><h4 class="text-sm font-bold uppercase">Quick Links</h4><ul class="mt-3 space-y-2 text-gray-400 text-sm"><li><a href="about.html" class="hover:text-haven-gold">About</a></li><li><a href="services.html" class="hover:text-haven-gold">Services</a></li><li><a href="projects.html" class="hover:text-haven-gold">Projects</a></li><li><a href="contact.html" class="hover:text-haven-gold">Contact</a></li></ul></div><div><h4 class="text-sm font-bold uppercase">Services</h4><ul class="mt-3 space-y-2 text-gray-400 text-sm"><li>Residential Building</li><li>Commercial Construction</li><li>Precast Mouldings</li><li>Finishing & Renovation</li></ul></div><div><h4 class="text-sm font-bold uppercase">Contact</h4><ul class="mt-3 space-y-2 text-gray-400 text-sm"><li>092 588 8028</li><li>info@hamconstruction.com</li><li>Juba, South Sudan</li></ul></div></div><div class="border-t border-white/10 mt-10 pt-8 text-center text-gray-500 text-xs">© 2026 Ham Construction & Trading Co. Ltd. All rights reserved.</div></div></footer>
+    <button id="backToTop" class="fixed bottom-6 right-6 w-11 h-11 bg-haven-gold text-haven-navy rounded-full shadow-lg opacity-0 pointer-events-none transition-all duration-300 hover:bg-white z-50"><i data-lucide="arrow-up" class="w-5 h-5 mx-auto"></i></button>
+    <script src="script.js"></script>
+</body>
+</html>
