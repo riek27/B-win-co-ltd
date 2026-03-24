@@ -1,191 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Elite Roofing</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <title>Contact Us | Ham Construction & Trading Co. Ltd</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
+    <script> tailwind.config = { theme: { extend: { colors: { haven: { navy: '#0B1120', charcoal: '#1E293B', gold: '#D4AF37', goldLight: '#F3E5AB', goldDark: '#B89628' } }, fontFamily: { sans: ['Manrope'], serif: ['Playfair Display'] } } } } </script>
 </head>
-<body>
-    <!-- Header & Navigation -->
-    <header>
-        <div class="container header-container">
-            <a href="index.html" class="logo">Elite<span>Roofing</span></a>
-            <button class="mobile-menu-btn">☰</button>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li class="dropdown">
-                    <a href="services.html">Services</a>
-                    <ul class="dropdown-content">
-                        <li><a href="services.html#roof-installation">Roof Installation</a></li>
-                        <li><a href="services.html#roof-repair">Roof Repair</a></li>
-                        <li><a href="services.html#roof-replacement">Roof Replacement</a></li>
-                        <li><a href="services.html#gutter-installation">Gutter Installation</a></li>
-                    </ul>
-                </li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-            </ul>
-        </div>
-    </header>
+<body class="antialiased cursor-custom">
+    <div class="cursor-dot hidden lg:block"></div><div class="cursor-outline hidden lg:block"></div>
+    <!-- Navigation (same) -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-5 text-white"><div class="container mx-auto px-5 lg:px-8"><div class="flex justify-between items-center"><a href="index.html" class="text-xl md:text-2xl font-serif font-bold tracking-widest uppercase flex items-center gap-2"><i data-lucide="building-2" class="text-haven-gold w-5 h-5"></i><span class="hidden xs:inline">Ham Construction</span></a><div class="hidden lg:flex items-center space-x-7 text-sm font-medium"><a href="about.html" class="hover:text-haven-gold transition">About</a><a href="services.html" class="hover:text-haven-gold transition">Services</a><a href="projects.html" class="hover:text-haven-gold transition">Projects</a><a href="contact.html" class="hover:text-haven-gold transition">Contact</a></div><div class="hidden lg:flex items-center gap-5"><a href="tel:+211925888028" class="text-sm font-semibold text-haven-gold">092 588 8028</a><a href="contact.html" class="btn-luxury bg-haven-gold hover:bg-white text-haven-navy font-bold py-2.5 px-6 rounded-sm">Get Quote</a></div><button class="lg:hidden text-white p-2" onclick="toggleMenu()"><i data-lucide="menu" class="w-6 h-6"></i></button></div></div></nav>
+    <div id="mobile-menu" class="fixed inset-0 bg-haven-navy/95 backdrop-blur-xl z-40 transform translate-x-full transition-transform duration-500 flex flex-col justify-center items-center gap-6 lg:hidden"><button class="absolute top-6 right-6 text-white p-2" onclick="toggleMenu()"><i data-lucide="x" class="w-8 h-8"></i></button><a href="about.html" class="text-2xl font-serif text-white" onclick="toggleMenu()">About</a><a href="services.html" class="text-2xl font-serif text-white" onclick="toggleMenu()">Services</a><a href="projects.html" class="text-2xl font-serif text-white" onclick="toggleMenu()">Projects</a><a href="contact.html" class="text-2xl font-serif text-white" onclick="toggleMenu()">Contact</a><a href="contact.html" class="mt-4 bg-haven-gold text-haven-navy px-8 py-3 rounded-sm font-bold" onclick="toggleMenu()">Get a Quote</a><a href="tel:+211925888028" class="text-haven-gold text-xl font-bold">092 588 8028</a></div>
 
-    <!-- Contact Page Content -->
-    <main class="page-content">
-        <section class="contact-page">
-            <div class="container">
-                <h2 class="section-title">Contact Us</h2>
-                <p class="text-center" style="margin-bottom: 50px;">Get in touch with our team for a free consultation and quote. We're here to answer all your roofing questions.</p>
-                
-                <div class="contact-content">
-                    <div class="contact-form">
-                        <form id="contactForm">
-                            <div class="form-group">
-                                <label for="name">Full Name *</label>
-                                <input type="text" id="name" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email Address *</label>
-                                <input type="email" id="email" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="service">Service Interested In</label>
-                                <select id="service" class="form-control">
-                                    <option value="">Select a service</option>
-                                    <option value="roof-installation">Roof Installation</option>
-                                    <option value="roof-repair">Roof Repair</option>
-                                    <option value="roof-replacement">Roof Replacement</option>
-                                    <option value="gutter-installation">Gutter Installation</option>
-                                    <option value="inspection">Free Inspection</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message *</label>
-                                <textarea id="message" class="form-control" placeholder="Tell us about your project..." required></textarea>
-                            </div>
-                            <button type="submit" class="btn" style="width: 100%;">Send Message</button>
-                        </form>
-                    </div>
-                    
-                    <div class="contact-info">
-                        <div class="info-item">
-                            <div class="info-icon">📍</div>
-                            <div class="info-content">
-                                <h3>Our Location</h3>
-                                <p>123 Premium Drive<br>Luxury District, CA 90210</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-icon">📞</div>
-                            <div class="info-content">
-                                <h3>Phone Number</h3>
-                                <p>(555) 123-4567</p>
-                                <p style="font-size: 0.9rem; color: #666;">Emergency services available 24/7</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-icon">✉️</div>
-                            <div class="info-content">
-                                <h3>Email Address</h3>
-                                <p>info@eliteroofing.com</p>
-                                <p>quotes@eliteroofing.com</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-icon">🕒</div>
-                            <div class="info-content">
-                                <h3>Business Hours</h3>
-                                <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
-                                <p>Saturday: 9:00 AM - 2:00 PM</p>
-                                <p>Sunday: Closed</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-icon">📋</div>
-                            <div class="info-content">
-                                <h3>Service Area</h3>
-                                <p>Serving Luxury District and surrounding areas within 50 miles. Free estimates for all local projects.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <header class="relative pt-32 pb-20 bg-haven-navy overflow-hidden"><div class="absolute inset-0 z-0 opacity-30"><img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=2070&auto=format" class="w-full h-full object-cover"></div><div class="container mx-auto px-5 text-center relative z-10"><h1 class="text-4xl md:text-6xl font-serif text-white">Contact Us</h1><p class="text-gray-300 mt-4">Let's discuss your next project.</p></div></header>
 
-                <div class="map-section" style="margin-top: 60px;">
-                    <h3 class="section-title">Find Us</h3>
-                    <div style="background: var(--light-gray); padding: 40px; border-radius: 8px; text-align: center;">
-                        <p style="margin-bottom: 20px;">📍 <strong>Elite Roofing Headquarters</strong><br>123 Premium Drive, Luxury District, CA 90210</p>
-                        <div style="height: 300px; background: #ddd; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
-                            <p>Interactive Map Would Appear Here</p>
-                        </div>
-                        <p style="margin-top: 20px; font-size: 0.9rem;">Easy access from main highways with ample parking available.</p>
-                    </div>
-                </div>
-
-                <div class="cta" style="margin-top: 60px;">
-                    <div class="container">
-                        <h2>Ready to Get Started?</h2>
-                        <p>Don't wait until it's too late. Contact us today for a free, no-obligation quote on your roofing project.</p>
-                        <a href="tel:5551234567" class="btn">Call Now: (555) 123-4567</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>Elite Roofing</h3>
-                    <p>Premium roofing solutions for luxury homes with unmatched craftsmanship and attention to detail.</p>
-                    <div class="social-links">
-                        <a href="#"><span>FB</span></a>
-                        <a href="#"><span>IG</span></a>
-                        <a href="#"><span>TW</span></a>
-                        <a href="#"><span>LI</span></a>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="services.html#roof-installation">Roof Installation</a></li>
-                        <li><a href="services.html#roof-repair">Roof Repair</a></li>
-                        <li><a href="services.html#roof-replacement">Roof Replacement</a></li>
-                        <li><a href="services.html#gutter-installation">Gutter Installation</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact Info</h3>
-                    <ul class="footer-links">
-                        <li>123 Premium Drive, Luxury District, CA 90210</li>
-                        <li>(555) 123-4567</li>
-                        <li>info@eliteroofing.com</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 Elite Roofing. All rights reserved.</p>
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-5 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div><h3 class="text-2xl font-serif text-haven-navy mb-6">Send a Message</h3><form class="space-y-5" onsubmit="event.preventDefault(); alert('Thank you! Ham Construction will reach out within 24 hours.');"><input type="text" placeholder="Full Name" required class="w-full border border-gray-300 rounded-sm px-4 py-3 focus:border-haven-gold"><input type="email" placeholder="Email Address" required class="w-full border border-gray-300 rounded-sm px-4 py-3"><input type="tel" placeholder="Phone Number" required class="w-full border border-gray-300 rounded-sm px-4 py-3"><textarea rows="5" placeholder="Tell us about your project..." class="w-full border border-gray-300 rounded-sm px-4 py-3"></textarea><button type="submit" class="bg-haven-navy text-white hover:bg-haven-gold hover:text-haven-navy font-bold py-3 px-6 rounded-sm transition uppercase text-sm tracking-wider">Submit Inquiry</button></form></div>
+                <div><h3 class="text-2xl font-serif text-haven-navy mb-6">Get in Touch</h3><div class="space-y-6"><div class="flex gap-4"><div class="w-12 h-12 bg-haven-gold/10 rounded-full flex items-center justify-center"><i data-lucide="phone" class="text-haven-gold"></i></div><div><p class="text-xs uppercase text-gray-500">Call Us</p><a href="tel:+211925888028" class="text-xl font-bold text-haven-navy">092 588 8028</a></div></div><div class="flex gap-4"><div class="w-12 h-12 bg-haven-gold/10 rounded-full flex items-center justify-center"><i data-lucide="mail" class="text-haven-gold"></i></div><div><p class="text-xs uppercase text-gray-500">Email</p><a href="mailto:info@hamconstruction.com" class="text-xl font-bold text-haven-navy">info@hamconstruction.com</a></div></div><div class="flex gap-4"><div class="w-12 h-12 bg-haven-gold/10 rounded-full flex items-center justify-center"><i data-lucide="map-pin" class="text-haven-gold"></i></div><div><p class="text-xs uppercase text-gray-500">Office Location</p><p class="font-medium text-haven-navy">Konyo Konyo, Juba<br>South Sudan</p></div></div></div><div class="mt-8 p-5 bg-gray-50 rounded-sm"><h4 class="font-bold text-haven-navy">Business Hours</h4><p class="text-gray-600">Monday - Friday: 8:00 AM - 5:00 PM<br>Saturday: 9:00 AM - 2:00 PM<br>Sunday: Closed</p></div></div>
             </div>
         </div>
-    </footer>
+    </section>
 
+    <footer class="bg-haven-charcoal text-white py-12 border-t border-white/10"><div class="container mx-auto px-5"><div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8"><div><a href="index.html" class="flex items-center gap-2 text-xl font-serif font-bold"><i data-lucide="building-2" class="text-haven-gold"></i>Ham Construction</a><p class="text-gray-400 text-sm mt-3">Premium construction & trading company in Juba, South Sudan.</p></div><div><h4 class="text-sm font-bold uppercase">Quick Links</h4><ul class="mt-3 space-y-2 text-gray-400 text-sm"><li><a href="about.html" class="hover:text-haven-gold">About</a></li><li><a href="services.html" class="hover:text-haven-gold">Services</a></li><li><a href="projects.html" class="hover:text-haven-gold">Projects</a></li><li><a href="contact.html" class="hover:text-haven-gold">Contact</a></li></ul></div><div><h4 class="text-sm font-bold uppercase">Services</h4><ul class="mt-3 space-y-2 text-gray-400 text-sm"><li>Residential Building</li><li>Commercial Construction</li><li>Precast Mouldings</li><li>Finishing & Renovation</li></ul></div><div><h4 class="text-sm font-bold uppercase">Contact</h4><ul class="mt-3 space-y-2 text-gray-400 text-sm"><li>092 588 8028</li><li>info@hamconstruction.com</li><li>Konyo Konyo, Juba, South Sudan</li></ul></div></div><div class="border-t border-white/10 mt-10 pt-8 text-center text-gray-500 text-xs">© 2026 Ham Construction & Trading Co. Ltd. All rights reserved.</div></div></footer>
+    <button id="backToTop" class="fixed bottom-6 right-6 w-11 h-11 bg-haven-gold text-haven-navy rounded-full shadow-lg opacity-0 pointer-events-none transition-all duration-300 hover:bg-white z-50"><i data-lucide="arrow-up" class="w-5 h-5 mx-auto"></i></button>
     <script src="script.js"></script>
 </body>
 </html>
